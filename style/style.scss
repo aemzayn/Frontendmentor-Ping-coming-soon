@@ -1,0 +1,179 @@
+// Colors
+$blue: #4f7df3;
+$paleBlue: #c2d3ff;
+$lightRed: #ff5263;
+$gray: #969696;
+$darkBlue: #151f29;
+$lightGray: #CFD2E3;
+
+// Break-points
+$desktop: 1440px;
+$mobile: 375px;
+
+// Reset
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: 0;
+}
+
+// Layout
+body {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 85px 0 50px;
+  font-family: 'Libre Franklin', sans-serif;
+  @media screen and (max-width: $mobile) {
+    padding: 80px 0 30px;
+    text-align: center;
+  }
+  .logo {
+    width: 85px;
+    margin-bottom: 50px;
+    @media screen and (max-width: $mobile) {
+      width: 60px;
+    }
+  }
+  h1 {
+    font-size: 45px;
+    font-weight: 300;
+    color: $gray;
+    margin-bottom: 30px;
+    span {
+      font-weight: 800;
+      color: $darkBlue;
+    }
+    @media screen and (max-width: $mobile) {
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+  }
+  h4 {
+    color: $darkBlue;
+    font-size: 20px;
+    margin-bottom: 45px;
+    font-weight: 400;
+    @media screen and (max-width: $mobile) {
+      font-size: 12px;
+      margin-bottom: 30px;
+    }
+  }
+  form {
+    display: flex;
+    margin-bottom: 30px;
+    justify-content: center;
+    align-items: center;
+    .input {
+      position: relative;
+      @media screen and (max-width: $mobile) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      input {
+        border: none;
+        border: 1px solid $lightGray;
+        border-radius: 50px;
+        padding: 20px 240px 20px 30px;
+        outline: none;
+        margin-right: 10px;
+        margin-bottom: 7px;
+        &::placeholder {
+          font-size: 16px;
+          color: $lightGray;
+          font-family: 'Libre Franklin', sans-serif;
+          @media screen and (max-width: $mobile) {
+            font-size: 13px;
+          }
+        }
+        @media screen and (max-width: $mobile) {
+          padding: 12px 73px 12px 30px;
+          flex-grow: 1;
+          margin-right: 0;
+        }
+        &.error {
+          border: 1px solid $lightRed;
+        }
+      }
+      #invalid {
+        display: none;
+        margin-left: 30px;
+        font-size-adjust: 16px;
+        color: $lightRed;
+        font-weight: 300;
+        font-style: italic;
+        @media screen and (max-width: $mobile) {
+          font-size: 10px;
+          margin-bottom: 20px;
+          flex: 1;
+          margin-left: 0;
+        }
+      }
+    }
+    button {
+      padding: 20px 65px;
+      border: none;
+      border-radius: 50px;
+      background-color: $blue; 
+      color: white;
+      font-weight: 600;
+      box-shadow: 0 5px 5px 5px hsla(223, 87%, 63%, 0.102);
+      cursor: pointer;
+      outline: none;
+      @media screen and (max-width: $mobile) {
+        font-size: 12px;
+        padding: 14px 110px;
+      }
+    }
+    @media screen and (max-width: $mobile) {
+      flex-direction: column;
+    }
+  }
+  .illustration {
+    width: 500px;
+    margin-bottom: 100px;
+    @media screen and (max-width: $mobile) {
+      width: 300px;
+      margin-bottom: 130px;
+    }
+  }
+  .social-media {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    .circle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid $lightGray;
+      border-radius: 50px;
+      margin: 0 5px;
+      margin-bottom: 30px;
+      width: 30px;
+      height: 30px;
+      transition: all .2s ease-in-out;
+      cursor: pointer;
+      i {
+        color: $blue;
+      }
+      &:hover {
+        background-color: $blue;
+        i {
+          color: white;
+        }
+      }
+    }
+  }
+  h5 {
+    font-size: 13px;
+    color: $gray;
+    font-weight: 300;
+    @media screen and (max-width: $mobile) {
+      font-size: 10px;
+    }
+  }
+}
