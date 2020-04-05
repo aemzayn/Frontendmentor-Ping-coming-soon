@@ -1,1 +1,1 @@
-This website is live [here](https://google.com/)
+(live website)[https://aemzayn.github.io/ping-coming-soon/]
